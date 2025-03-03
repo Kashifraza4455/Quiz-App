@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="start-screen" id="start-screen">
+        <h1>Welcome to the Quiz App</h1>
+        <button id="start-quiz">Start Quiz</button>
+    </div>
+    
+    <div class="quiz-container" id="quiz-container" style="display: none;">
+        <h2 id="quiz-question"></h2>
+        <ul>
+            <li><input type="radio" class="answer" id="option-a" name="quiz-options"><label for="option-a" id="text_option_a"></label>
+                <label for="option-a" id="text_option_e" class="label"></label>
+            </li>
+            <li><input type="radio" class="answer" id="option-b" name="quiz-options"><label for="option-b" id="text_option_b"></label>
+                <label for="option-a" id="text_option_e" class="label"></label>
+            </li>
+            <li><input type="radio" class="answer" id="option-c" name="quiz-options"><label for="option-c" id="text_option_c"></label>
+                <label for="option-a" id="text_option_e" class="label"></label>
+            </li>
+            <li><input type="radio" class="answer" id="option-d" name="quiz-options"><label for="option-d" id="text_option_d"></label>
+                <label for="option-a" id="text_option_e" class="label"></label>
+            </li>
+        </ul>
+        <button id="submit">Continue <i class="fas fa-arrow-right"></i></button>
+    </div>
+    
+    <div class="score-box" id="score-box" style="display: none;">
+        <h2>Quiz Score</h2>
+        <p id="score-text"></p>
+        <button id="restart-quiz">Restart Quiz <i class="fas fa-redo"></i></button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
