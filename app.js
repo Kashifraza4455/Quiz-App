@@ -93,6 +93,7 @@ startQuizBtn.addEventListener("click", () => {
     loadQuestion();
 });
 
+
 submit.addEventListener("click", () => {
     const checkedAns = document.querySelector('input[type="radio"]:checked');
 
@@ -101,16 +102,39 @@ submit.addEventListener("click", () => {
     } else {
         let selectedLabel = checkedAns.nextElementSibling;
         let correctAnswerText = quiz[currentQuestion].answer;
+        let allLiElements = document.querySelectorAll("ul li");
 
-        // Reset all options to orange with white text
-        document.querySelectorAll("ul li").forEach(li => {
-            li.style.background = "#ff9800"; 
-            li.style.color = "white"; 
+        // Reset all <li> elements before applying new styles
+        allLiElements.forEach(li => {
+            li.classList.remove("correct", "incorrect");
+            li.style.background = ""; 
+            li.style.color = "black";
         });
 
-        // Change correct answer to green
         if (selectedLabel.textContent === correctAnswerText) {
-            selectedLabel.parentElement.style.background = "#4CAF50"; 
+            // Set all <li> elements to orange first
+            allLiElements.forEach(li => {
+                li.style.background = "#ff9800"; 
+                li.style.color = "white"; 
+            });
+
+            // Set the correct answer to green
+            selectedLabel.parentElement.classList.add("correct");
+            score++;
+        } else {
+            // If incorrect, turn all <li> elements orange
+            allLiElements.forEach(li => {
+                li.classList.add("incorrect");
+                li.style.background = "#ff9800"; 
+                li.style.color = "white";
+            });
+
+            // Highlight the correct answer in green
+            document.querySelectorAll("li label").forEach(label => {
+                if (label.textContent === correctAnswerText) {
+                    label.parentElement.classList.add("correct");
+                }
+            });
         }
 
         setTimeout(() => {
@@ -127,12 +151,16 @@ submit.addEventListener("click", () => {
 
 
 
+
+
+
+
 function showScore() {
     quizContainer.style.display = "none";
     scoreBox.style.display = "block";
 
-    let correctAnswers = score; // Total correct answers
-    let incorrectAnswers = quiz.length - score; // Total incorrect answers
+    let correctAnswers = score; 
+    let incorrectAnswers = quiz.length - score; 
 
     scoreText.innerHTML = `
         <p>Your Score: ${score} / ${quiz.length}</p>
