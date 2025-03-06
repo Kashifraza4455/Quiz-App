@@ -11,26 +11,35 @@
     <div class="start-screen" id="start-screen">
         <h1>Welcome to the Quiz App</h1>
         <button id="start-quiz">Start Quiz</button>
-    </div>
-    
+        
+    </div>    
     <div class="quiz-container" id="quiz-container" style="display: none;">
-        <h2 id="quiz-question"></h2>
+        <p id="score-display">Score: 0/40</p> <!-- Score Box ko quiz-container ke andar rakha -->
+        <h2 id="quiz-question"></h2> <!-- Question bhi andar hona chahiye -->
+        
         <ul>
-            <li><input type="radio" class="answer" id="option-a" name="quiz-options"><label for="option-a" id="text_option_a"></label>
-                <label for="option-a" id="text_option_e" class="label"></label>
+            <li>
+                <input type="radio" class="answer" id="option-a" name="quiz-options">
+                <label for="option-a" id="text_option_a"></label>
             </li>
-            <li><input type="radio" class="answer" id="option-b" name="quiz-options"><label for="option-b" id="text_option_b"></label>
-                <label for="option-a" id="text_option_e" class="label"></label>
+            <li>
+                <input type="radio" class="answer" id="option-b" name="quiz-options">
+                <label for="option-b" id="text_option_b"></label>
             </li>
-            <li><input type="radio" class="answer" id="option-c" name="quiz-options"><label for="option-c" id="text_option_c"></label>
-                <label for="option-a" id="text_option_e" class="label"></label>
+            <li>
+                <input type="radio" class="answer" id="option-c" name="quiz-options">
+                <label for="option-c" id="text_option_c"></label>
             </li>
-            <li><input type="radio" class="answer" id="option-d" name="quiz-options"><label for="option-d" id="text_option_d"></label>
-                <label for="option-a" id="text_option_e" class="label"></label>
+            <li>
+                <input type="radio" class="answer" id="option-d" name="quiz-options">
+                <label for="option-d" id="text_option_d"></label>
             </li>
         </ul>
-        <button id="submit">Continue <i class="fas fa-arrow-right"></i></button>
+        
+    
+        <button id="submit" disabled>Continue <i class="fas fa-arrow-right"></i></button>
     </div>
+    
     
     <div class="score-box" id="score-box" style="display: none;">
         <h2>Quiz Score</h2>
