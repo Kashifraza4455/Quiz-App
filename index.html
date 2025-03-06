@@ -3,48 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Premium Quiz App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <div class="start-screen" id="start-screen">
-        <h1>Welcome to the Quiz App</h1>
+        <h1>✨ Welcome to the Quiz App ✨</h1>
         <button id="start-quiz">Start Quiz</button>
-        
     </div>    
+
     <div class="quiz-container" id="quiz-container" style="display: none;">
-        <p id="score-display">Score: 0/40</p> 
-        <h2 id="quiz-question"></h2> 
+        <p id="score-display">Score: 0/40</p>
+        <p id="timer">⏳ Time Left: 60s</p>
+        <h2 id="quiz-question"></h2>
         
         <ul>
-            <li>
-                <input type="radio" class="answer" id="option-a" name="quiz-options">
-                <label for="option-a" id="text_option_a"></label>
-            </li>
-            <li>
-                <input type="radio" class="answer" id="option-b" name="quiz-options">
-                <label for="option-b" id="text_option_b"></label>
-            </li>
-            <li>
-                <input type="radio" class="answer" id="option-c" name="quiz-options">
-                <label for="option-c" id="text_option_c"></label>
-            </li>
-            <li>
-                <input type="radio" class="answer" id="option-d" name="quiz-options">
-                <label for="option-d" id="text_option_d"></label>
-            </li>
+            <li><input type="radio" class="answer" id="option-a" name="quiz-options"><label for="option-a" id="text_option_a"></label></li>
+            <li><input type="radio" class="answer" id="option-b" name="quiz-options"><label for="option-b" id="text_option_b"></label></li>
+            <li><input type="radio" class="answer" id="option-c" name="quiz-options"><label for="option-c" id="text_option_c"></label></li>
+            <li><input type="radio" class="answer" id="option-d" name="quiz-options"><label for="option-d" id="text_option_d"></label></li>
         </ul>
         
-    
         <button id="submit" disabled>Continue <i class="fas fa-arrow-right"></i></button>
     </div>
     
-    
     <div class="score-box" id="score-box" style="display: none;">
-        <h2>Quiz Score</h2>
+        <h2>🎉 Quiz Completed 🎉</h2>
         <p id="score-text"></p>
-        <button id="restart-quiz" class="restart-quiz">Restart Quiz <i class="fas fa-redo"></i></button>
+        <button id="restart-quiz">Restart Quiz <i class="fas fa-redo"></i></button>
     </div>
     
     <script src="app.js"></script>
