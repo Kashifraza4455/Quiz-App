@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px; /* Mobile ke liye padding */
+    padding: 20px; 
     transition: background 0.5s ease-in-out;
 }
 
@@ -23,7 +23,7 @@ body {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    max-width: 500px; /* Taake bada screen par bhi theek dikhe */
+    max-width: 500px; 
 }
 
 .start-screen:hover, .quiz-container:hover, .score-box:hover {
@@ -130,7 +130,7 @@ li.incorrect {
 /* 📱 Responsive Design */
 @media screen and (max-width: 600px) {
     .start-screen, .quiz-container, .score-box {
-        width: 90%; /* Mobile par zyada space le */
+        width: 90%; 
         padding: 20px;
     }
 
