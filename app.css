@@ -1,4 +1,4 @@
-/* 🌟 Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +16,6 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
-/* 🎨 Neo-Glassmorphism Effect */
 .start-screen, .quiz-container, .score-box {
     text-align: center;
     background: rgba(255, 255, 255, 0.12);
@@ -35,15 +34,12 @@ body {
     box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* 🎀 Title Styling */
 .start-screen h1 {
     font-size: 2.5rem;
     color: white;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
-
-/* 🌟 Button Styling */
 button {
     background: linear-gradient(135deg, #ff0080, #ff6600);
     color: white;
@@ -65,14 +61,12 @@ button:hover {
     box-shadow: 0px 5px 20px rgba(255, 0, 128, 0.6);
 }
 
-/* 📜 Quiz Content */
 #quiz-question {
     font-size: 1.9rem;
     color: white;
     margin-bottom: 15px;
 }
 
-/* 📝 Answer List */
 ul {
     list-style: none;
     padding: 0;
@@ -106,7 +100,6 @@ li.incorrect {
     color: white !important;
 }
 
-/* 🎉 Score Box */
 .score-box {
     animation: fadeIn 0.8s ease-in-out;
 }
@@ -123,7 +116,6 @@ li.incorrect {
     font-weight: bold;
 }
 
-/* 🔥 Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
